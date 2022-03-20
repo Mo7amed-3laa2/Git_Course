@@ -1,0 +1,146 @@
+Vid#03
+
+git clone URL_OF_GITHUB
+_____________________
+Vid#04
+
+git status
+git add FILE_NAME
+git add    *
+git reset head FILE_NAME (to remove the added file from the staging area)
+git commit -m "MESSAGE_OF_COMMITING"
+______________________
+Vid#05
+
+git branch (to show all exist branches)
+git push REMOTE_REBO BRANCH_NAME
+git push origin master
+git remote -v  (to show all exist remote repos)
+
+______________________
+Vid#06
+
+git pull REMOTE_REBO (to get the latest modification from remote repo  (get fetch then get merge))  
+git pull origin
+
+______________________
+Vid#07
+
+git config -l (to list all configurations)
+git help config
+git config --global user.email (to get any value of configs)
+git config --global user.email "NEW_NAME"   (to set any value of configs)
+git config -l --show-origin (to list all directories of configs)
+git config --global --unset user.name (to remove any value of configs)
+
+git config --global --edit
+
+[color "status"]
+  added = yellow
+  changed = red bold
+  untracked = magenta bold
+[color "branch"]
+  remote = yellow
+
+______________________
+Vid#08
+
+ssh-keygen -t rsa -b 4096 -C "email" (create a public key to id_rsa file)
+ssh -T git@github.com (and enter the password of the key)
+
+______________________
+Vid#09
+
+git init (to initialize folder to be a repo -putting .git folder-)
+
+git remote add origin SSH_KEY_URL
+git push -u origin master (push but first make pull by -u)
+
+______________________
+Vid#11
+
+git config --global alias.SHORTCUT COMMAND_NAME (create a new alias) 
+git config --global alias.st status
+git config --global alias.st (to show the alisa)
+git config --global alias.br branch
+git config --global alias.cm "commit -m"
+git config --global --edit
+
+[alias]
+ SHORT_CUT = COMMAND_NAME
+ st = status
+ br = branch
+ cm = commit -m
+
+google on git alias list
+_____________________
+Vid#12
+
+git branch
+git branch BRANCH_NAME (create new branch)
+git branch scroll
+git checkout scroll (switching to the scroll branch)
+git branch -d scroll (safe delete: delete the branch only if there is no modification)
+git branch -D scroll (force delete: delete the branch even there is a modification)
+git checkout -b BRANCH_NAME (create new branch and switching to it)
+git branch -m NEW_BRANCH_NAME (renaming the branch)
+
+git merge BRANCH_NAME (to merge BRANCH_NAME to the current branch)
+git push origin master (merging the branches to the master then --> push it to the origin repo)
+git push origin scroll (direct pushing --> push branch into the origin repo directly -require a pull request-)
+
+______________________
+Vid#13
+
+git stash (saving the stagging area files into stach and remove it from the stagging area)
+git stash list (list the exist stashes with thier id's)
+git stash pop (pop the files from the stash to the stagging area | if there are many stash pop the last one | NOTE: popping mean delete the data from the stash after pop it)
+
+______________________
+Vid#14
+
+git stash save "MESSAGE"
+git stash apply stash@{NUM} (copy the files from the specific stash to the stagging area)
+git stash pop stash@{NUM} (pop specific stash)
+git stash drop stash@{NUM} (delete specific stash with it's data)
+git stash show (get info about the stash data)
+git stash clear (delete all stashes with it's files)
+
+Given Task: (create a stash with many files and make a branch from it ...)
+
+______________________
+Vid#15
+
+git restore --staged (restore the staged files to the untracked area)
+git restore --staged FILE_NAME (restore specific staged file to the untracked area) 
+git clean -n (show the files to be removed)
+git clean -f (perform the removing)
+
+______________________
+Vid#16
+
+git log
+git reset --hard HASH_CODE (delete everything without letting any changes)
+git push origin main --force
+
+
+
+______________________
+Vid#17
+
+
+
+
+______________________
+Vid#18
+
+
+
+
+______________________
+Vid#19
+
+
+
+______________________
+Vid#20
