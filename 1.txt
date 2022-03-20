@@ -116,31 +116,49 @@ git restore --staged FILE_NAME (restore specific staged file to the untracked ar
 git clean -n (show the files to be removed)
 git clean -f (perform the removing)
 
-______________________
+_____________________
 Vid#16
 
 git log
-git reset --hard HASH_CODE (delete everything without letting any changes)
-git push origin main --force
-
-
+git reset --hard HASH_CODE (point the head to the commit you want || hard --> to delete everything without letting the changes || soft --> the vise versa)
+git push origin main --force (force --> to make force update)
 
 ______________________
 Vid#17
 
+.gitignore file
 
+FILENAME.EXT
+*.log
+!FILENAME.EXT (to allow only this file if you ignore his extension)
+FOLDERNAME/
+
+git add -f FILENAME.EXT || git add force FILENAME.EXT
+
+google on gitignore patterns
 
 
 ______________________
 Vid#18
 
+lite weight tag & unotated tag
 
+git tag (showing the existing tags)
+git tag TAG_NAME (creating lite weight tag => take the message from the commit)
+git tag v1.0 
+git push origin v1.0 (to push the new tag)
+git tag -a TAG_NAME -m "THE MESSAGE"  (creating lite annotated tag => take the message from the user)
 
+NOTE: commits go to the all tags .. the best case to make branch for every release
 
 ______________________
 Vid#19
 
-
+git tag -l "v1.*"  (searching for tags like this and list them)
+git tag -d  TAG_NAME
+git push origin --delete TAG_NAME
 
 ______________________
 Vid#20
+ git version control cookbook
+elzsrowebschool --> git and gitbub course
